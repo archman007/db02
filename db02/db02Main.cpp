@@ -118,7 +118,7 @@ void db02Frame::OnmenDoDataSelected(wxCommandEvent& event)
     try
     {
         Connection conn(true);
-        conn.connect("bcswebtools", "localhost", "bcs", "Peace007!amb");
+        conn.connect("dbname", "localhost", "user-ID", "Passwprd");
         Query query = conn.query();
         query << "SELECT * FROM lk1 LIMIT 10";
         StoreQueryResult ares = query.store();
