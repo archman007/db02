@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="db02" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/db02" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="/home/archman/apps/mariadb-connector-c-3.3.2-src/include" />
+					<Add directory="/usr/include/mysql++/" />
+				</Compiler>
+				<Linker>
+					<Add option="-L /usr/lib/" />
+					<Add library="libmysqlpp" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/db02" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="/home/archman/apps/mariadb-connector-c-3.3.2-src/include" />
+					<Add directory="/usr/include/mysql++/" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-L /usr/lib/" />
+					<Add library="libmysqlpp" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="`wx-config --cflags`" />
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add option="`wx-config --libs`" />
+		</Linker>
+		<Unit filename="db02App.cpp" />
+		<Unit filename="db02App.h" />
+		<Unit filename="db02Main.cpp" />
+		<Unit filename="db02Main.h" />
+		<Unit filename="wxsmith/db02frame.wxs" />
+		<Extensions>
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="db02App.cpp" main="db02Frame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/db02frame.wxs" src="db02Main.cpp" hdr="db02Main.h" fwddecl="0" i18n="1" name="db02Frame" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
