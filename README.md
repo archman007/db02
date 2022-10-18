@@ -1,2 +1,2 @@
 # db02
-mysql++ in Maria DB
+mysql++ via Maria DB
